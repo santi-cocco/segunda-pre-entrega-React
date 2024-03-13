@@ -1,0 +1,27 @@
+ .cartCount {
+    color: #fff;
+  }
+  .cartButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .cartIcon {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+.cartButton:hover {
+    box-shadow: 0 0 25px rgb(255, 254, 254);
+  }
+  
+.cartButton:hover .cartIcon {
+    filter: brightness(0.8);
+  }
+  
+.cartCount {
+    color: #fff;
+  }

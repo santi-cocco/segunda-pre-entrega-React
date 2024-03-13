@@ -1,0 +1,54 @@
+.header {
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  font-family:'Times New Roman', Times, serif sans-serif;
+  text-decoration:dashed;
+  font-weight: 400;
+  }
+  
+
+
+/* Estilos para los enlaces */
+.header nav .btn {
+  color: #fff; 
+  text-decoration: none; 
+  margin-right: 20px; 
+  font-size: 18px; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  background-color: transparent;
+  border: 2px solid transparent; 
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+ }
+
+
+.header nav .btn:hover {
+  color: #333; 
+  background-color: #bdb48f; 
+  border-color: #bdb48f; 
+  cursor: pointer
+}
+
+.logo{
+  width: 80px;
+  border-radius: 5px;
+
+}
+
+.header .title {
+  color: #333;
+  font-size: 28px; 
+  font-family: 'Arial', sans-serif;
+  font-weight: bold; 
+  background-color: #ffaf01; 
+  padding: 10px 10px;
+  border-radius: 5px; 
+  margin: 0; 
+  text-shadow: 2px 2px 4px rgba(204, 185, 16, 0.493);
+  box-shadow: 0 4px 8px rgba(194, 115, 11, 0.623); 
+  translate: none;
+}
