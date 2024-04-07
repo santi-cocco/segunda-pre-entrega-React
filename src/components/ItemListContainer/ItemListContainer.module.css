@@ -1,12 +1,13 @@
 .container {
-  background-color: #f8f9fa; 
+  background-color: #7ac5f7; 
   border-radius: 8px; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 5px; 
+  display:inline-flex;
+  width: 100%;
 }
 
-.title {
-  color: #33333375; 
+.title { 
   font-size: 34px; 
   font-weight: bold; 
   margin-top: 10px;
@@ -15,10 +16,11 @@
   justify-content: center;
 }
 .main {
-  background-color: #f8f9fa67;
+  background-color: #faf8f867;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row; /* Cambiar de columna a fila */
+  justify-content: center; /* Alinear los elementos al centro horizontalmente */
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en una nueva línea si no caben en el ancho del contenedor */
   padding: 20px;
 }
 
@@ -46,4 +48,4 @@
   border-color: #bdb48f; 
   cursor: pointer;
 }
-
+ 

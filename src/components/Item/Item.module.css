@@ -11,7 +11,7 @@
 }
 
 .item:hover {
-  box-shadow: 0 2px 40px rgb(199, 151, 18);
+  box-shadow: 0 2px 40px rgb(9, 130, 230);
 }
 
 .imageContainer {
@@ -19,7 +19,7 @@
 }
 
 .image {
-  width: 100%;
+  width: 80%;
   border-radius: 8px;
 }
 
@@ -33,7 +33,8 @@
 }
 
 .category,
-.price {
+.price,
+.description {
   font-size: 14px;
   color: #777;
   margin-bottom: 5px;
@@ -42,7 +43,7 @@
 .link {
   display: inline-block;
   padding: 5px 10px;
-  background-color: #ffaf01; 
+  background-color: #0989ff;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -50,7 +51,7 @@
 }
 
 .link:hover {
-  background-color: #c9ac39; 
+  background-color: #0989ff;
   border-color: #bdb48f; 
-  box-shadow: 0 2px 40px rgb(255, 187, 2);
+  box-shadow: 0 2px 40px rgb(2, 112, 255);
 }

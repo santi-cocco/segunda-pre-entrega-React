@@ -1,37 +1,42 @@
-.container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .count {
-    margin: 0 10px;
-    font-size: 18px;
-  }
-  
-  .button {
-    background-color: #ffaf01; 
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .button:hover,
-  .button1 {
-    background-color: #ffaf01; 
-    text-shadow: 2px 2px 4px rgba(204, 185, 16, 0.493);
-    box-shadow: 0 4px 8px rgba(194, 115, 11, 0.623); 
-  }
 
-  .button1{
-    background-color: black;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
-    cursor: pointer;
-    transition: background-color 0.3s;    
-  }
+.controls {
+  display: flex;
+  align-items: center; 
+  border-radius: 10px;
+}
+
+.number {
+  margin: 10px; 
+  background-color: #c4c0c0cc;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.button {
+  background-color: #007bffa9;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 10px;
+}
+
+
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.fa-minus,
+.fa-plus {
+  font-size: 10px;
+  margin: 0 5px;
+  padding: none;
   
+}
+
+.addToCart {
+  margin-top: 10px;
+}

@@ -1,27 +1,35 @@
-import{ useState, useEffect } from "react"
-import { getProductById } from "../../asyncMock"
-import ItemDetail from "../ItemDetail/ItemDetail"
+import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import classes from "../ItemDetailContainer/ItemDetailContainer.module.css"
-
+import ItemDetail from "../ItemDetail/ItemDetail"
+import { getDoc, doc } from "firebase/firestore"
+import { db } from "../../services/firebase/firebaseConfig"
+import { useNotification } from "../../notification/hooks/useNotification"
+import { useAsync } from "../../hooks/useAsync"
+import { getProductById } from "../../services/firebase/firestore/products"
+import classes from './ItemDetailContainer.module.css'
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState(null)
-
+    
     const { itemId } = useParams()
 
-    useEffect(() => {
-        getProductById(itemId)
-           .then(result => {
-              setProduct(result)
-           })
-    }, [itemId])
+    const asyncFunction = () => getProductById(itemId)
 
-  return (
-    <main className={classes.main}>
-      <h1 className={classes.title}>Detalle de producto </h1>
-      <ItemDetail {...product} />
-    </main>
-  )
+    const { data: product, loading, error} = useAsync(asyncFunction, [itemId])
+
+    if(loading) {
+        return <h1>Se esta cargando el producto...</h1>
+    }
+
+    if(error) {
+        return <h1>Hubo un error obteniendo el producto.</h1>
+    }
+    
+    return (
+        <div className={classes.main}>
+            <h1 className={classes.title}>Detalle de producto</h1>
+            <ItemDetail {...product} />
+        </div>
+    )
 }
 
 export default ItemDetailContainer
+

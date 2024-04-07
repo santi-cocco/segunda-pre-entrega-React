@@ -1,24 +1,55 @@
-import { Link } from "react-router-dom"
-import CartWidget from "../CartWidget/CartWidget"
-import classes from "../Navbar/Navbar.module.css"
-import logo from '../../assets/logo.png'
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import logo from '../../assets/logo.png';
+import CartWidget from '../CartWidget/CartWidget';
+import classes from './Navbar.module.css';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
-    <header className={classes.header}>
-       <img className={classes.logo} src={logo} alt="Logo de la empresa " />
-       <nav>      
-            <Link to="/" className={classes.btn} href="#inicio">Inicio</Link>
-            <a className={classes.btn} href="#acerca-de">Nosotros</a>
-            <a className={classes.btn} href="#contacto">Contacto</a>
-        </nav>
-        <h1 className={classes.title}  lang="en">MODERNMARKET</h1>
-        <div>
-            <CartWidget />
+    <>
+      <div className={classes.free}>
+        <p>Envío GRATIS en compras hasta $10.000</p>
+      </div>
+      <div className={classes.main_header}>
+        <div className={classes.container}>
+          <div className={classes.logo}>
+            <img src={logo} alt="logo" />
+          </div>
+          <div>
+            <h2 onClick={() => navigate('/')}>Modern Market</h2>
+          </div>
         </div>
-    </header>
-  )
+      </div>
+      <div className={classes.header}>
+        <div className={classes.container}>
+          <div className={classes.nav}>
+            <ul>
+              <li>
+                <Link to='/' className={classes.link}>Inicio</Link>
+              </li>
+              <li>
+                <Link to='/nosotros' className={classes.link}>Nosotros</Link>
+              </li>
+              <li>
+                <Link to='/category/remeras' className={classes.link}>Remeras</Link>
+              </li>
+              <li>
+                <Link to='/category/pantalones' className={classes.link}>Pantalones</Link>
+              </li>
+              <li>
+                <Link to='/category/zapatillas' className={classes.link}>Zapatillas</Link>
+              </li>
+              <li>
+                <CartWidget />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default Navbar
-
+export default Navbar;

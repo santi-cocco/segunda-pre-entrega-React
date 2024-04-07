@@ -1,0 +1,35 @@
+/* CartView.module.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-item {
+    margin-bottom: 20px;
+}
+
+.product-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.product-quantity {
+    font-size: 16px;
+    color: #777;
+}
